@@ -39,7 +39,7 @@ class Datatables {
 		return $this;
 	}
 	
-	public function where($column, $operator, $value, $seperator = false){
+	public function where($column, $operator, $value, $seperator = 'AND'){
 		$this->where[] = array($column, $operator, $value, $seperator);
 		$this->db->where($column, $operator, $value, $seperator);
 		return $this;

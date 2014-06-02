@@ -117,10 +117,12 @@ class Datatables extends Resources\Controller
 		->primary("IDTBDOS")
 		->select(array('NIDNNTBDOS','NOKTPTBDOS','NMDOSTBDOS','TPLHRTBDOS','TGLHRTBDOS'))
 			//->select(array('KDKMKTBKMK','NAKMKTBKMK','NMDOSTBDOS'))
-		->from('tbdos');
+		->from('tbdos')
 			//->join('tbdos','NODOSTBKMK','NIDNNTBDOS')
-			//->where ('KDKMKTBKMK','=','DMI201');
+		// ->where ('KDKMKTBKMK','=','DMI201');
+		->where ('TPLHRTBDOS','=','wonosobo');
 		echo $this->DT->generate();
+		
 	}
 	
 	/**
